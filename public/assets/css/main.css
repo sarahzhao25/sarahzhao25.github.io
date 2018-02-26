@@ -23,7 +23,7 @@
 	16. header-01
 	17. hero
 	18. Layout
-	19. Grid Boostrap 
+	19. Grid Boostrap
 	20. Font size
 	21. Margin Padding
     22. Swiper
@@ -2362,8 +2362,18 @@ ul {
     padding-right: 20px;
 }
 
+.portfolio__text1 {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+}
 
-/* 19. Grid Boostrap 
+.portfolio__text2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+/* 19. Grid Boostrap
 --------------------------------------------------------------------------------*/
 
 .no-gutters {

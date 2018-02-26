@@ -1,5 +1,5 @@
 (function($) {
-"use strict";
+'use strict';
 
 /**
  * [isMobile description]
@@ -30,7 +30,7 @@ window.windowHeight = window.innerHeight;
 window.windowWidth = window.innerWidth;
 
 /**
- * Match height 
+ * Match height
  */
 $('.row-eq-height > [class*="col-"]').matchHeight();
 
@@ -81,7 +81,7 @@ $.fn.reCalWidth = function() {
 		_self.css('width', '');
 		var width = Math.floor(_self.width());
 		_self.css('width', width + 'px');
-		var height = Math.floor(_self.parent().children('.wide').width()/2);
+		var height = Math.floor(_self.parent().children('.wide').width() / 2);
 		_self.parent().children('.wide').css('height', height + 'px');
 	});
 	$(window).on('resize', function() {
@@ -99,7 +99,7 @@ function work() {
 		workContainer.imagesLoaded( function() {
 
 // Fix Height
-			if( workWrapper.hasClass('grid-css--fixheight')) {
+			if ( workWrapper.hasClass('grid-css--fixheight')) {
 				workContainer.find('.grid-item__content-wrapper').matchHeight();
 			}
 
@@ -138,22 +138,22 @@ $('.grid-item', workWrapper).reCalWidth();
 }
 work();
 
-$('.portfolio').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: true,
-    fixedContentPos: true,
-    closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="pe-7s-close"></i></button>',
+// $('.portfolio').magnificPopup({
+//     delegate: 'a',
+//     type: 'image',
+//     closeOnContentClick: true,
+//     closeBtnInside: true,
+//     fixedContentPos: true,
+//     closeMarkup: '<button title="%title%" type="button" class="mfp-close"><i class="pe-7s-close"></i></button>',
 
-removalDelay: 500, //delay removal by X to allow out-animation
-    callbacks: {
-        beforeOpen: function() {
-            this.st.mainClass = this.st.el.attr('data-effect');
-        }
-    },
-    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-});
+// removalDelay: 500, //delay removal by X to allow out-animation
+//     callbacks: {
+//         beforeOpen: function() {
+//             this.st.mainClass = this.st.el.attr('data-effect');
+//         }
+//     },
+//     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+// });
 
 $('.portfolio .popup-video').magnificPopup({
     disableOn: 700,
@@ -175,9 +175,9 @@ removalDelay: 500, //delay removal by X to allow out-animation
 /**
  *  Slide Custom
  */
-if( $('.slide-item').length ) {
-	var $sync1 = $(".slide-image__front .swiper-container"),
-		$sync2 = $(".slide-image__black .swiper-container");
+if ( $('.slide-item').length ) {
+	var $sync1 = $('.slide-image__front .swiper-container'),
+		$sync2 = $('.slide-image__black .swiper-container');
 
 var galleryTop = new Swiper($sync1, {
         spaceBetween: 10,
@@ -275,9 +275,9 @@ var wh = $(window).height(),
 $(window).scroll(function() {
 	var scrollTop = $(window).scrollTop();
 
-if(scrollTop >=  half) {
+if (scrollTop >=  half) {
 		$('header').addClass('is-scroll');
-	}else {
+	} else {
 		$('header').removeClass('is-scroll');
 	}
 
@@ -308,9 +308,9 @@ $(window).scroll(function() {
 	var wh = $(window).height(),
 		scrollTop = $(window).scrollTop();
 
-if(scrollTop >= wh ){
+if (scrollTop >= wh ){
 		$('#back-to-top').addClass('is-visible')
-	}else {
+	} else {
 		$('#back-to-top').removeClass('is-visible')
 	}
 });
@@ -318,7 +318,8 @@ if(scrollTop >= wh ){
 var headerHeight = $('header').outerHeight();
 
 $('#back-to-down').on('click', function() {
-	var offsets = $(this).closest('.hero').next().offset().top - headerHeight;
+	var offsets = $(this).closest('.hero').next()
+.offset().top - headerHeight;
 
 $('html,body').animate({
         scrollTop: offsets
