@@ -1555,6 +1555,7 @@ ul {
 
 .portfolio:hover {
     box-shadow: 0 16px 22px 0 rgba(90, 91, 95, .3);
+    background-color: rgba(90, 91, 95, .3);
 }
 
 .portfolio__bg {
@@ -2293,9 +2294,16 @@ ul {
     display: inline-block;
 }
 
-.hero__text {
-    font-size: 20px;
+.hero__text .typing__module {
+    font-size: 60px;
     color: #fff;
+    display: inline-block;
+}
+
+.hero__text {
+    font-size: 40px;
+    color: #fff;
+    display: inline-block;
 }
 
 @-webkit-keyframes bounce {
@@ -2366,6 +2374,7 @@ ul {
     font-size: 36px;
     color: white;
     text-align: center;
+    padding-top: 3.5em;
 }
 
 .portfolio__text2 {
